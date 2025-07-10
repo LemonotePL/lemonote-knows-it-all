@@ -28,7 +28,7 @@ export const HeroSection = () => {
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <img 
-              src="/lemonote.png" 
+              src="/lemonotelogo.png" 
               alt="Lemonote Logo" 
               className="h-16 w-auto"
             />
