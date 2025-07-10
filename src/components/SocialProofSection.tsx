@@ -16,7 +16,7 @@ export const SocialProofSection = () => {
               <img 
                 src="/IHF.png" 
                 alt="Innovations Hub Foundation" 
-                className="w-12 h-12 object-contain"
+                className="w-40 h-40 object-contain"
               />
               <div className="text-left">
                 <div className="font-semibold text-gray-900">Innovations Hub Foundation</div>

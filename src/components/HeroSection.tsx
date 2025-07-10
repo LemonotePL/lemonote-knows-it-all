@@ -30,7 +30,7 @@ export const HeroSection = () => {
             <img 
               src="/lemonotelogo.png" 
               alt="Lemonote Logo" 
-              className="h-16 w-auto"
+              className="h-44 w-auto"
             />
           </div>
 
