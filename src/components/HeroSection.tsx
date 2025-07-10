@@ -3,14 +3,20 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Smartphone, ArrowRight, Sparkles } from "lucide-react";
+import { useWaitingList } from "@/hooks/useWaitingList";
 
 export const HeroSection = () => {
   const [email, setEmail] = useState("");
+  const { addToWaitingList, isLoading } = useWaitingList();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Email submitted:", email);
-    // Handle email submission here
+    if (!email) return;
+    
+    const result = await addToWaitingList(email, 'hero_section');
+    if (result.success) {
+      setEmail("");
+    }
   };
 
   return (
@@ -19,6 +25,15 @@ export const HeroSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/lemonote.png" 
+              alt="Lemonote Logo" 
+              className="h-16 w-auto"
+            />
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-purple-200 rounded-full px-4 py-2 mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-purple-600" />
@@ -76,9 +91,14 @@ export const HeroSection = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 h-12 bg-white/90 backdrop-blur-sm border-purple-200 focus:border-purple-400"
                 required
+                disabled={isLoading}
               />
-              <Button type="submit" className="h-12 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium">
-                Join the Waiting List
+              <Button 
+                type="submit" 
+                className="h-12 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium"
+                disabled={isLoading}
+              >
+                {isLoading ? "Joining..." : "Join the Waiting List"}
               </Button>
             </div>
             <p className="text-sm text-gray-500">

@@ -3,14 +3,20 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Smile } from "lucide-react";
+import { useWaitingList } from "@/hooks/useWaitingList";
 
 export const FinalCTASection = () => {
   const [email, setEmail] = useState("");
+  const { addToWaitingList, isLoading } = useWaitingList();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Final CTA email submitted:", email);
-    // Handle email submission here
+    if (!email) return;
+    
+    const result = await addToWaitingList(email, 'final_cta');
+    if (result.success) {
+      setEmail("");
+    }
   };
 
   return (
@@ -36,9 +42,14 @@ export const FinalCTASection = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     className="flex-1 h-12 bg-white/90 backdrop-blur-sm border-white/20 text-gray-900 placeholder:text-gray-500"
                     required
+                    disabled={isLoading}
                   />
-                  <Button type="submit" className="h-12 px-6 bg-white text-purple-600 hover:bg-gray-100 font-medium">
-                    Sign me up for the list!
+                  <Button 
+                    type="submit" 
+                    className="h-12 px-6 bg-white text-purple-600 hover:bg-gray-100 font-medium"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Signing up..." : "Sign me up for the list!"}
                   </Button>
                 </div>
               </form>

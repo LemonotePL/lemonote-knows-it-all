@@ -13,7 +13,11 @@ export const SocialProofSection = () => {
           
           <div className="flex justify-center">
             <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-2xl p-8 inline-flex items-center gap-4">
-              <Award className="w-12 h-12 text-purple-600" />
+              <img 
+                src="/IHF.png" 
+                alt="Innovations Hub Foundation" 
+                className="w-12 h-12 object-contain"
+              />
               <div className="text-left">
                 <div className="font-semibold text-gray-900">Innovations Hub Foundation</div>
                 <div className="text-sm text-gray-600">Incubation Programme Participant</div>
