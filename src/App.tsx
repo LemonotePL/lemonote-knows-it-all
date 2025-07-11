@@ -9,10 +9,10 @@ import posthog from "posthog-js";
 
 const queryClient = new QueryClient();
 
-posthog.init("process.env.POSTHOG_API_KEY", {
+posthog.init(import.meta.env.POSTHOG_API_KEY, {
   api_host: "https://lemonote.posthog.com",
 });
-posthog.capture('event_name', { property: 'value' });
+posthog.capture('$pageview');
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
