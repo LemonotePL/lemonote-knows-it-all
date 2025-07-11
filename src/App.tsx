@@ -5,8 +5,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import posthog from "posthog-js";
 
 const queryClient = new QueryClient();
+
+posthog.init("process.env.POSTHOG_API_KEY", {
+  api_host: "https://lemonote.posthog.com",
+});
+posthog.capture('event_name', { property: 'value' });
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
