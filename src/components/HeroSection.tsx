@@ -20,7 +20,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 pt-20 pb-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 pt-36 pb-32">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -81,21 +81,21 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* CTA Form */}
+          {/* CTA Form - Now Vertical */}
           <form onSubmit={handleSubmit} className="max-w-md mx-auto animate-fade-in">
-            <div className="flex gap-3 mb-4">
+            <div className="space-y-3 mb-4">
               <Input
                 type="email"
                 placeholder="Enter your email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-12 bg-white/90 backdrop-blur-sm border-purple-200 focus:border-purple-400"
+                className="w-full h-12 bg-white/90 backdrop-blur-sm border-purple-200 focus:border-purple-400"
                 required
                 disabled={isLoading}
               />
               <Button 
                 type="submit" 
-                className="h-12 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium"
+                className="w-full h-12 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium"
                 disabled={isLoading}
               >
                 {isLoading ? "Joining..." : "Join the Waiting List"}

@@ -34,19 +34,19 @@ export const FinalCTASection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                <div className="flex gap-3 mb-4">
+                <div className="space-y-3 mb-4">
                   <Input
                     type="email"
                     placeholder="Enter your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 h-12 bg-white/90 backdrop-blur-sm border-white/20 text-gray-900 placeholder:text-gray-500"
+                    className="w-full h-12 bg-white/90 backdrop-blur-sm border-white/20 text-gray-900 placeholder:text-gray-500"
                     required
                     disabled={isLoading}
                   />
                   <Button 
                     type="submit" 
-                    className="h-12 px-6 bg-white text-purple-600 hover:bg-gray-100 font-medium"
+                    className="w-full h-12 bg-white text-purple-600 hover:bg-gray-100 font-medium"
                     disabled={isLoading}
                   >
                     {isLoading ? "Signing up..." : "Sign me up for the list!"}
