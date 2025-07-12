@@ -20,7 +20,7 @@ export const Footer = () => {
             <h3 className="text-lg font-medium text-gray-300">Follow us</h3>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com/lemonote"
+                href="https://instagram.com/lemonote.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-full transition-all duration-300"
@@ -29,7 +29,7 @@ export const Footer = () => {
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="https://tiktok.com/@lemonote"
+                href="https://tiktok.com/@lemonote.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-black rounded-full transition-colors duration-300"
