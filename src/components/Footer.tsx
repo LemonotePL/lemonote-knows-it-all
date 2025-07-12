@@ -44,8 +44,6 @@ export const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2024 Lemonote. All rights reserved.</p>
-            <p className="mt-2">Built with ❤️ for better productivity</p>
           </div>
         </div>
       </div>
