@@ -8,7 +8,7 @@ export const VideoSection = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">See the magic in action</h2>
 
           <div className="relative inline-block bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl p-2">
-            <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden">
+            <div className="aspect-[9/16] bg-gray-200 rounded-xl overflow-hidden max-w-md mx-auto">
               <video
                 controls
                 className="w-full h-full object-cover rounded-xl"
