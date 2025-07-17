@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Smartphone, ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { useWaitingList } from "@/hooks/useWaitingList";
 
 export const HeroSection = () => {
@@ -50,38 +50,62 @@ export const HeroSection = () => {
             Lemonote is the first app that passively analyses your screenshots and turns digital chaos into an intelligent, searchable knowledge base. Stop collecting, start using.
           </h2>
 
-          {/* Visualization */}
+          {/* App Screenshots */}
           <div className="mb-12 relative animate-fade-in">
-            <div className="relative max-w-2xl mx-auto">
-              <div className="grid grid-cols-3 gap-4 mb-8 opacity-60">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}>
-                    <Smartphone className="w-full h-full p-4 text-gray-400" />
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-purple-200">
+                <img 
+                  src="/lovable-uploads/2e79b9dc-84da-4644-841c-ab7a124267a4.png" 
+                  alt="Lemonote Categories Interface" 
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
-              
-              <div className="absolute inset-0 flex items-center justify-center">
-                <ArrowRight className="w-12 h-12 text-purple-600 animate-bounce" />
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-purple-200">
+                <img 
+                  src="/lovable-uploads/fee51237-5a98-46ae-a79f-b37ef6d21393.png" 
+                  alt="Lemonote Settings Interface" 
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
-              
-              <div className="mt-8 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-200 shadow-xl">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                  <span className="text-sm font-medium text-gray-600 ml-2">Lemonote</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-                  <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-                  <div className="h-3 bg-purple-200 rounded w-2/3"></div>
-                </div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-purple-200">
+                <img 
+                  src="/lovable-uploads/47038e5b-af50-47d0-8804-423876009304.png" 
+                  alt="Lemonote Recipe Note Interface" 
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
             </div>
           </div>
 
-          {/* CTA Form - Now Vertical */}
+          {/* Integration Section */}
+          <div className="mb-12 animate-fade-in">
+            <p className="text-lg text-gray-600 mb-6">Connect our features with your favourite note apps</p>
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              {/* Notion */}
+              <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
+                <div className="w-8 h-8 bg-black rounded text-white flex items-center justify-center text-xs font-bold">N</div>
+              </div>
+              
+              {/* Obsidian */}
+              <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-white rounded-full"></div>
+                </div>
+              </div>
+              
+              {/* OneNote */}
+              <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
+                <div className="w-8 h-8 bg-purple-700 rounded text-white flex items-center justify-center text-xs font-bold">O</div>
+              </div>
+              
+              {/* Evernote */}
+              <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
+                <div className="w-8 h-8 bg-green-600 rounded text-white flex items-center justify-center text-xs font-bold">E</div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Form - Vertical */}
           <form onSubmit={handleSubmit} className="max-w-md mx-auto animate-fade-in">
             <div className="space-y-3 mb-4">
               <Input
