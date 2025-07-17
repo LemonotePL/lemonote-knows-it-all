@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const questions = [
   "Do you have over 100 unstructured screenshots on your phone?",
-  "Do you use Notion/ Evernote/ OneNote/ Google Notes but lack the time to take notes?",
+  "Do you use Notion / Obsidian / OneNote / Evernote but lack the time to take notes?",
   "Does your work or study require constant online research?",
   "Do you believe that automation is the key to higher productivity?"
 ];
