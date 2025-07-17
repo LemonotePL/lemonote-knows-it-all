@@ -12,7 +12,7 @@ export const HeroSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    
+
     const result = await addToWaitingList(email, 'hero_section');
     if (result.success) {
       setEmail("");
@@ -22,14 +22,14 @@ export const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 pt-36 pb-32">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <img 
-              src="/lemonotelogo.png" 
-              alt="Lemonote Logo" 
+            <img
+              src="/lemonotelogo.png"
+              alt="Lemonote Logo"
               className="h-44 w-auto"
             />
           </div>
@@ -54,23 +54,23 @@ export const HeroSection = () => {
           <div className="mb-12 relative animate-fade-in">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-purple-200">
-                <img 
-                  src="/lovable-uploads/2e79b9dc-84da-4644-841c-ab7a124267a4.png" 
-                  alt="Lemonote Categories Interface" 
+                <img
+                  src="/lovable-uploads/2e79b9dc-84da-4644-841c-ab7a124267a4.png"
+                  alt="Lemonote Categories Interface"
                   className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-purple-200">
-                <img 
-                  src="/lovable-uploads/fee51237-5a98-46ae-a79f-b37ef6d21393.png" 
-                  alt="Lemonote Settings Interface" 
+                <img
+                  src="/lovable-uploads/fee51237-5a98-46ae-a79f-b37ef6d21393.png"
+                  alt="Lemonote Settings Interface"
                   className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-purple-200">
-                <img 
-                  src="/lovable-uploads/47038e5b-af50-47d0-8804-423876009304.png" 
-                  alt="Lemonote Recipe Note Interface" 
+                <img
+                  src="/lovable-uploads/47038e5b-af50-47d0-8804-423876009304.png"
+                  alt="Lemonote Recipe Note Interface"
                   className="w-full h-auto rounded-lg"
                 />
               </div>
@@ -83,27 +83,42 @@ export const HeroSection = () => {
             <div className="flex justify-center items-center gap-8 flex-wrap">
               {/* Notion */}
               <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
-                <div className="w-8 h-8 bg-black rounded text-white flex items-center justify-center text-xs font-bold">N</div>
+                <img
+                  src="/notionlogo.png"
+                  alt="Notion"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
-              
+
               {/* Obsidian */}
               <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
-                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
-                </div>
+                <img
+                  src="/obsidianlogo.png"
+                  alt="Obsidian"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
-              
+
               {/* OneNote */}
               <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
-                <div className="w-8 h-8 bg-purple-700 rounded text-white flex items-center justify-center text-xs font-bold">O</div>
+                <img
+                  src="/onenotelogo.png"
+                  alt="OneNote"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
-              
+
               {/* Evernote */}
               <div className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center">
-                <div className="w-8 h-8 bg-green-600 rounded text-white flex items-center justify-center text-xs font-bold">E</div>
+                <img
+                  src="/evernotelogo.png"
+                  alt="Evernote"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
             </div>
           </div>
+
 
           {/* CTA Form - Vertical */}
           <form onSubmit={handleSubmit} className="max-w-md mx-auto animate-fade-in">
@@ -117,8 +132,8 @@ export const HeroSection = () => {
                 required
                 disabled={isLoading}
               />
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full h-12 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium"
                 disabled={isLoading}
               >
