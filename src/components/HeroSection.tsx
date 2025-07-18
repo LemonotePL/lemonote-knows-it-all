@@ -42,7 +42,7 @@ export const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-purple-800 to-indigo-800 bg-clip-text text-transparent mb-6 animate-fade-in leading-tight">
-            Your second brain that takes notes on its own
+            Don't let another great idea die in a screenshot
           </h1>
 
           {/* Sub Headline */}
