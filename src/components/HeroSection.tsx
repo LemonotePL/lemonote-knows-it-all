@@ -52,6 +52,10 @@ export const HeroSection = () => {
           
           <h2 className="text-4xl font-bold text-gray-900 mb-6">See the magic in action</h2>
 
+          <p className="text-lg text-gray-600 mt-6">
+            See how Lemonote turns chaos into structured knowledge in less than 60 seconds.
+          </p>          
+
           <div className="relative inline-block bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl p-2">
             <div className="aspect-[9/16] bg-gray-200 rounded-xl overflow-hidden max-w-md mx-auto">
               <video
@@ -63,10 +67,6 @@ export const HeroSection = () => {
               </video>
             </div>
           </div>
-
-          <p className="text-lg text-gray-600 mt-6">
-            See how Lemonote turns chaos into structured knowledge in less than 60 seconds.
-          </p>          
 
           {/* Integration Section */}
           <div className="mb-12 animate-fade-in">
